@@ -14,12 +14,12 @@ class ScoreTagTask extends Task{
 	}
 	
 	public function onRun(int $tick):void{
-		foreach($this->plugin->getServer()->getOnlinePlayers() as $players){
-		$player = $players->getPlayer();
+	    foreach($this->plugin->getServer()->getOnlinePlayers() as $players){
+            $player = $players->getPlayer();
             $name = $player->getName();
             $tps = $this->plugin->getServer()->getTicksPerSecond();
             $usage = $this->plugin->getServer()->getTickUsage();
-	      $online = $online = count($this->plugin->getServer()->getOnlinePlayers());
+	    $online = $online = count($this->plugin->getServer()->getOnlinePlayers());
             $max_online = $this->plugin->getServer()->getMaxPlayers();
             $x = round($player->getX(), 0);
             $y = round($player->getY(), 0);
@@ -31,8 +31,8 @@ class ScoreTagTask extends Task{
             $ping = $player->getPing($name);
             
             $tag = $this->plugin->config->get("ScoreTag");
-		$tag = str_replace("{cps}", $this->plugin->getCPS($players), $tag);
-		$tag = str_replace("&", "§", $tag);
+            $tag = str_replace("{cps}", $this->plugin->getCPS($players), $tag);
+	    $tag = str_replace("&", "§", $tag);
             $tag = str_replace("{name}", $name, $tag);
             $tag = str_replace("{tps}", $tps, $tag);
             $tag = str_replace("{usage}", $usage, $tag);
@@ -47,7 +47,7 @@ class ScoreTagTask extends Task{
             $tag = str_replace("{level}", $level, $tag);
             $tag = str_replace("{ping}", $ping, $tag);
 
-		$players->setScoreTag($tag);
+	    $players->setScoreTag($tag);
 		}
 	}
 }
