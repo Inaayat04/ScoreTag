@@ -1,0 +1,5 @@
+name: ScoreTag
+version: 1.0.0
+main: Inaayat\ScoreTag\Main
+api: [3.0.0]
+author: Inaayat
