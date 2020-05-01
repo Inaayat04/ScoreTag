@@ -1,6 +1,7 @@
 # ScoreTag
 
 * Shows a Tag below player nametag.
+* [![](https://poggit.pmmp.io/shield.state/ScoreTag)](https://poggit.pmmp.io/p/ScoreTag)
 
 # How to Install?
 
