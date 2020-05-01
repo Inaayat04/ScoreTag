@@ -16,19 +16,19 @@ class ScoreTagTask extends Task{
 	public function onRun(int $tick):void{
 	    foreach($this->plugin->getServer()->getOnlinePlayers() as $players){
             $player = $players->getPlayer();
-            $name = $player->getName();
+            $name = $players->getName();
             $tps = $this->plugin->getServer()->getTicksPerSecond();
             $usage = $this->plugin->getServer()->getTickUsage();
-	    $online = $online = count($this->plugin->getServer()->getOnlinePlayers());
+	    $online = count($this->plugin->getServer()->getOnlinePlayers());
             $max_online = $this->plugin->getServer()->getMaxPlayers();
-            $x = round($player->getX(), 0);
-            $y = round($player->getY(), 0);
-            $z = round($player->getZ(), 0);
-            $item = $player->getInventory()->getItemInHand()->getName();
-            $id = $player->getInventory()->getItemInHand()->getId();
-            $ids = $player->getInventory()->getItemInHand()->getDamage();
-            $level = $player->getLevel()->getName();
-            $ping = $player->getPing($name);
+            $x = round($players->getX(), 0);
+            $y = round($players->getY(), 0);
+            $z = round($players->getZ(), 0);
+            $item = $players->getInventory()->getItemInHand()->getName();
+            $id = $players->getInventory()->getItemInHand()->getId();
+            $ids = $players->getInventory()->getItemInHand()->getDamage();
+            $level = $players->getLevel()->getName();
+            $ping = $players->getPing($name);
             
             $tag = $this->plugin->config->get("ScoreTag");
             $tag = str_replace("{cps}", $this->plugin->getCPS($players), $tag);
