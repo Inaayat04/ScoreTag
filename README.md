@@ -10,27 +10,54 @@
 * and done Enjoy.
 
 # ScoreTag List:
-{name} - show player name.
 
-{tps} - show server TickPerSecond.
+#{name} - show player name.
 
-{online} - shows the count of how much player is online.
+#{tps} - show server TickPerSecond.
 
-{max_online} - get server max online.
+#{online} - shows the count of how much player is online.
 
-{x}/{y}/{z} - get player position position xyz.
+#{max_online} - get server max online.
 
-{level} - shows world name.
+#{x}/{y}/{z} - get player position position xyz.
 
-{id}:{ids} - Shows what item ID holding.
+#{level} - shows world name.
 
-{item} - shows the player holding item name.
+#{id}:{ids} - Shows what item ID holding.
 
-{usage} - Shows the server TickUsage.
+#{item} - shows the player holding item name.
 
-{ping} - shows the player ping.
+#{usage} - Shows the server TickUsage.
 
-{cps} - shows the player CPS.
+#{ping} - shows the player ping.
+
+#{cps} - shows the player CPS.
+
+#{money} - shows the player Money. (must have Economyapi plugin)
+
+#{hp} - shows the player health.
+
+#{max_hp} - shows the player max health.
+
+#{line} - go to another line.
+
+#{rank} - shows player rank. (must have PurePerms plugin)
+
+#{prefix} - shows player prefix. (must have PurePerms plugin)
+
+#{suffix} - shows player suffix. (must have PurePerms plugin)
+
+#{faction} - shows player faction.  (must have FactionPro plugin)
+
+#{fpower} - shows player faction player. (must have FactionPro plugin)
+
+#{combatlogger} - shows player combat log. (must have CombatLogger plugin)
+
+#{island_name} - shows player island name. (must have RedSkyblock plugin)
+
+#{island_rank} - shows player island rank. (must have RedSkyblock plugin)
+
+#{island_value} - shows rank island value. (must have RedSkyblock plugin)
 
 # Image:
 
