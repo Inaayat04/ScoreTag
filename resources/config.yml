@@ -2,7 +2,7 @@
 # ScoreTag Configuation:
 # use § or & for color:
 
-ScoreTag: "§3§lPing: &d{ping}"
+ScoreTag: "§a§lHealth: {line} &d{hp}/{max_hp}"
 
 #ScoreTag List:
 #{name} - show player name.
@@ -16,4 +16,17 @@ ScoreTag: "§3§lPing: &d{ping}"
 #{usage} - Shows the server TickUsage.
 #{ping} - shows the player ping.
 #{cps} - shows the player CPS.
+#{money} - shows the player Money. (must have Economyapi plugin)
+#{hp} - shows the player health.
+#{max_hp} - shows the player max health.
+#{line} - go to another line.
+#{rank} - shows player rank. (must have PurePerms plugin)
+#{prefix} - shows player prefix. (must have PurePerms plugin)
+#{suffix} - shows player suffix. (must have PurePerms plugin)
+#{faction} - shows player faction.  (must have FactionPro plugin)
+#{fpower} - shows player faction player. (must have FactionPro plugin)
+#{combatlogger} - shows player combat log. (must have CombatLogger plugin)
+#{island_name} - shows player island name. (must have RedSkyblock plugin)
+#{island_rank} - shows player island rank. (must have RedSkyblock plugin)
+#{island_value} - shows rank island value. (must have RedSkyblock plugin)
 ...
