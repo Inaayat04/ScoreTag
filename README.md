@@ -59,6 +59,12 @@
 
 #{island_value} - shows rank island value. (must have RedSkyblock plugin)
 
+#{faction_name} - shows player faction name. (must have PiggyFactions plugin)
+
+#{faction_power} - shows player faction power. (must have PiggyFactions plugin)
+
+#{faction_rank} - shows the player faction rank. (must have PiggyFactions plugin)
+
 # Image:
 
 
