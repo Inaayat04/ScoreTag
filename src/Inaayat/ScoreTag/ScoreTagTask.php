@@ -4,6 +4,7 @@ namespace Inaayat\ScoreTag;
 
 use pocketmine\scheduler\Task;
 use Inaayat\ScoreTag\Main;
+use DaPigGuy\PiggyFactions\players\PlayerManager;
 
 class ScoreTagTask extends Task{
 
@@ -83,6 +84,16 @@ class ScoreTagTask extends Task{
                 $tag = str_replace('{island_rank}', $RedSkyBlock->calcRank(strtolower($players->getName())), $tag);
                 $tag = str_replace('{island_value}', $RedSkyBlock->getValue($players), $tag);
             }
+			
+	    $PiggyFactions = $this->plugin->getServer()->getPluginManager()->getPlugin("PiggyFactions");
+            if (!is_null($PiggyFactions)) {
+		$member = PlayerManager::getInstance()->getPlayer($players->getUniqueId());
+		$faction = $member->getFaction();
+                $tag = str_replace('{faction_name}', $faction->getName(), $tag);
+                $tag = str_replace('{faction_power}', round($faction->getPower(), 2, PHP_ROUND_HALF_DOWN), $tag);
+		$tag = str_replace('{faction_rank}', $member->getRole(), $tag);
+            }
+
 
 		    $players->setScoreTag($tag);
 		}
