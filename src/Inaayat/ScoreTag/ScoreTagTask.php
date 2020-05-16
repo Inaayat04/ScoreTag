@@ -67,9 +67,9 @@ class ScoreTagTask extends Task{
             }
 
             $FactionsPro = $this->plugin->getServer()->getPluginManager()->getPlugin("FactionsPro");
-            $factionName = $FactionsPro->getPlayerFaction($players->getName());
+            $factionName = $FactionsPro->getPlayerFaction($players);
             if(!is_null($FactionsPro)){
-                $tag = str_replace('{faction}', $FactionsPro->getPlayerFaction($players->getName()), $tag);
+                $tag = str_replace('{faction}', $FactionsPro->getPlayerFaction($players), $tag);
                 $tag = str_replace('{fpower}', $FactionsPro->getFactionPower($factionName), $tag);
             }
 
