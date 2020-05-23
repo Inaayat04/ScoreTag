@@ -65,6 +65,10 @@
 
 #{faction_rank} - shows the player faction rank. (must have PiggyFactions plugin)
 
+#{device} - shows the player device. (Must have SeeDevice plugin by Palente)
+
+#{os} - shows the player OS. (must have SeeDevice plugin by Palante)
+
 # Image:
 
 
