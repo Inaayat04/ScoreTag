@@ -40,8 +40,9 @@ ScoreTag: "§a§lHealth: {line} &d{hp}/{max_hp}"
 #{island_name} - shows player island name. (must have RedSkyblock plugin)
 #{island_rank} - shows player island rank. (must have RedSkyblock plugin)
 #{island_value} - shows rank island value. (must have RedSkyblock plugin)
-
 #{faction_name} - shows player faction name. (must have PiggyFactions plugin)
 #{faction_power} - shows player faction power. (must have PiggyFactions plugin)
 #{faction_rank} - shows the player faction rank. (must have PiggyFactions plugin)
+#{device} - shows the player device. (Must have SeeDevice plugin by Palente)
+#{os} - shows the player OS. (must have SeeDevice plugin by Palante)
 ...
