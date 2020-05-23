@@ -93,7 +93,14 @@ class ScoreTagTask extends Task{
                 $tag = str_replace('{faction_power}', round($faction->getPower(), 2, PHP_ROUND_HALF_DOWN), $tag);
 		$tag = str_replace('{faction_rank}', $member->getRole(), $tag);
             }
-
+			
+	    $SeeDevice = $this->plugin->getServer()->getPluginManager()->getPlugin("SeeDevice");
+            if (!is_null($SeeDevice)) {
+		$device = $SeeDevice->getInstance()->getPlayerDevice($player);
+		$os = $SeeDevice->getInstance()->getPlayerOs($player);
+		$tag = str_replace('{device}', $device, $tag);
+		$tag = str_replace('{os}', $os, $tag);
+            }
 
 		    $players->setScoreTag($tag);
 		}
