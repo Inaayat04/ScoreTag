@@ -12,14 +12,14 @@ use pocketmine\network\mcpe\protocol\InventoryTransactionPacket;
 use pocketmine\utils\Config;
 use Inaayat\ScoreTag\ScoreTagTask;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener {
 
 	private $clicks;
 	public $config;
 	
 	public function onEnable(){
 		@mkdir($this->getDataFolder());
-		$this->saveDefaultConfig();
+		$this->saveResources("config.yml");
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		$this->getServer()->getPluginManager()->registerEvents($this ,$this);
 		$this->getScheduler()->scheduleRepeatingTask(new ScoreTagTask($this), 10);
