@@ -30,7 +30,7 @@ class PurePermsTagGroup extends PluginTagGroup {
 	public function register(TagFactory $factory): array {
 		return [
 			new ExternalPluginTag("rank", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getUserDataMgr()->getGroup($player)->getName();
+				return $plugin->getUserDataMgr()->getGroup($player)->getName() ?? "N/A";
 			}),
 			new ExternalPluginTag("prefix", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
 				return $plugin->getUserDataMgr()->getNode($player, "prefix") ?? "";

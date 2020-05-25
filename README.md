@@ -56,14 +56,14 @@ Download from Poggit: [![](https://poggit.pmmp.io/shield.state/ScoreTag)](https:
 
 ### PurePerms
 
-* {rank} - The player's rank.
+* {rank} - The player's rank. ('N/A', if a rank isn't found)
 * {prefix} - The player's prefix.
 * {suffix} - The player's suffix.
 
 
 ### RankUp
 
-* {rankup} - The player's current rank.
+* {rankup} - The player's current rank. ('N/A', if a rank isn't found)
 
 ### RedSkyblock
 

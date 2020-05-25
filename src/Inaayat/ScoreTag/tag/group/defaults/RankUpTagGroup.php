@@ -29,7 +29,7 @@ class RankUpTagGroup extends PluginTagGroup {
 	public function register(TagFactory $factory): array {
 		return [
 			new ExternalPluginTag("rankup", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return ($group = $plugin->getPermManager()->getGroup($player)) !== false ? $group : "";
+				return ($group = $plugin->getPermManager()->getGroup($player)) !== false ? $group : "N/A";
 			})
 		];
 	}
