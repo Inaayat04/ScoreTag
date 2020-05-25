@@ -2,7 +2,7 @@
 
 Show a tag below the player's nametag!
 
-Download from Poggit: [](https://poggit.pmmp.io/p/ScoreTag)
+Download from Poggit: [![](https://poggit.pmmp.io/shield.state/ScoreTag)](https://poggit.pmmp.io/p/ScoreTag)
 
 ## How to Install?
 
