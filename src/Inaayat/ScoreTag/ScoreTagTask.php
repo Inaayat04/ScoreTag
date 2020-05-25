@@ -6,7 +6,7 @@ use pocketmine\scheduler\Task;
 use Inaayat\ScoreTag\Main;
 use DaPigGuy\PiggyFactions\players\PlayerManager;
 
-class ScoreTagTask extends Task{
+class ScoreTagTask extends Task {
 
 	private $plugin;
 
