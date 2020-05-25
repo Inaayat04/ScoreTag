@@ -5,7 +5,7 @@ branches:
 projects:
   ScoreTag:
     path: ""
+    icon: icon.png
     lint:
       phpstan: false
-    icon: icon.png
 ...
