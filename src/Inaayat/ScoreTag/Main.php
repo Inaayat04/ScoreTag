@@ -1,45 +1,66 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Inaayat\ScoreTag;
 
+use Inaayat\ScoreTag\tag\TagFactory;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\InventoryTransactionPacket;
-use pocketmine\utils\Config;
-use Inaayat\ScoreTag\ScoreTagTask;
+use pocketmine\utils\TextFormat;
+use function in_array;
 
 class Main extends PluginBase implements Listener {
 
-	private $clicks;
-	public $config;
-	
-	public function onEnable(){
-		@mkdir($this->getDataFolder());
-		$this->saveResources("config.yml");
-		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-		$this->getServer()->getPluginManager()->registerEvents($this ,$this);
-		$this->getScheduler()->scheduleRepeatingTask(new ScoreTagTask($this), 10);
+	/** @var int[] */
+	private $clicks = [];
+
+	/** @var TagFactory */
+	private $tagFactory;
+
+	public function onLoad() {
+		$this->saveDefaultConfig();
+		$this->tagFactory = new TagFactory($this);
 	}
 
-	public function getCPS(Player $player): int{
-		if(!isset($this->clicks[$player->getLowerCaseName()])){
+	public function onEnable(): void {
+		$this->getTagFactory()->enable();
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		$this->getLogger()->info(TextFormat::GREEN . "{$this->getDescription()->getFullName()} has been enabled successfully!");
+	}
+
+	/**
+	 * @return TagFactory
+	 */
+	public function getTagFactory(): TagFactory {
+		return $this->tagFactory;
+	}
+
+	/**
+	 * @param Player $player
+	 * @return int
+	 */
+	public function getCPS(Player $player): int {
+		if(!isset($this->clicks[$player->getLowerCaseName()])) {
 			return 0;
 		}
 		$time = $this->clicks[$player->getLowerCaseName()][0];
 		$clicks = $this->clicks[$player->getLowerCaseName()][1];
-		if($time !== time()){
+		if($time !== time()) {
 			unset($this->clicks[$player->getLowerCaseName()]);
 			return 0;
 		}
 		return $clicks;
 	}
-	
-	public function addCPS(Player $player): void{
-		if(!isset($this->clicks[$player->getLowerCaseName()])){
+
+	/**
+	 * @param Player $player
+	 */
+	public function addCPS(Player $player): void {
+		if(!isset($this->clicks[$player->getLowerCaseName()])) {
 			$this->clicks[$player->getLowerCaseName()] = [time(), 0];
 		}
 		$time = $this->clicks[$player->getLowerCaseName()][0];
@@ -52,12 +73,14 @@ class Main extends PluginBase implements Listener {
 		$this->clicks[$player->getLowerCaseName()] = [$time, $clicks];
 	}
 
-	public function onDataPacketReceive(DataPacketReceiveEvent $event){
+	/**
+	 * @param DataPacketReceiveEvent $event
+	 */
+	public function onDataPacketReceive(DataPacketReceiveEvent $event): void {
 		$player = $event->getPlayer();
 		$packet = $event->getPacket();
-		if($packet instanceof InventoryTransactionPacket){
-			$transactionType = $packet->transactionType;
-			if($transactionType === InventoryTransactionPacket::TYPE_USE_ITEM || $transactionType === InventoryTransactionPacket::TYPE_USE_ITEM_ON_ENTITY){
+		if($packet instanceof InventoryTransactionPacket) {
+			if(in_array($packet->transactionType, [InventoryTransactionPacket::TYPE_USE_ITEM, InventoryTransactionPacket::TYPE_USE_ITEM_ON_ENTITY])) {
 				$this->addCPS($player);
 			}
 		}
