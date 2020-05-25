@@ -29,10 +29,10 @@ class SeeDeviceTagGroup extends PluginTagGroup {
 	public function register(TagFactory $factory): array {
 		return [
 			new ExternalPluginTag("device", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getPlayerDevice($player);
+				return $plugin->getPlayerDevice($player) ?? "";
 			}),
 			new ExternalPluginTag("os", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getPlayerOs($player);
+				return $plugin->getPlayerOs($player) ?? "";
 			})
 		];
 	}
