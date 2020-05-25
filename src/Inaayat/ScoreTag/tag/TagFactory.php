@@ -12,6 +12,7 @@ use Inaayat\ScoreTag\tag\group\defaults\EconomyAPITagGroup;
 use Inaayat\ScoreTag\tag\group\defaults\FactionsProTagGroup;
 use Inaayat\ScoreTag\tag\group\defaults\PiggyFactionsTagGroup;
 use Inaayat\ScoreTag\tag\group\defaults\PurePermsTagGroup;
+use Inaayat\ScoreTag\tag\group\defaults\RankUpTagGroup;
 use Inaayat\ScoreTag\tag\group\defaults\RedSkyBlockTagGroup;
 use Inaayat\ScoreTag\tag\group\defaults\SeeDeviceTagGroup;
 use Inaayat\ScoreTag\tag\group\TagGroup;
@@ -24,6 +25,7 @@ use function count;
 use function str_ireplace;
 use function str_replace;
 use function strlen;
+use function var_dump;
 
 class TagFactory {
 
@@ -104,6 +106,7 @@ class TagFactory {
 		$this->registerGroup(new FactionsProTagGroup($this->getPlugin()));
 		$this->registerGroup(new PiggyFactionsTagGroup($this->getPlugin()));
 		$this->registerGroup(new PurePermsTagGroup($this->getPlugin()));
+		$this->registerGroup(new RankUpTagGroup($this->getPlugin()));
 		$this->registerGroup(new RedSkyBlockTagGroup($this->getPlugin()));
 		$this->registerGroup(new SeeDeviceTagGroup($this->getPlugin()));
 		$count = count($this->getTags());

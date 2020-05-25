@@ -60,6 +60,11 @@ Download from Poggit: [![](https://poggit.pmmp.io/shield.state/ScoreTag)](https:
 * {prefix} - The player's prefix.
 * {suffix} - The player's suffix.
 
+
+### RankUp
+
+* {rankup} - The player's current rank.
+
 ### RedSkyblock
 
 * {island_name} - The name of the player's island. ('', if the player doesn't have an island)

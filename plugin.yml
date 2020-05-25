@@ -1,5 +1,5 @@
 name: ScoreTag
-version: 1.0.6
+version: 1.0.7
 main: Inaayat\ScoreTag\Main
 api:
   - 3.0.0
@@ -10,5 +10,6 @@ softdepend:
   - FactionsPro
   - PiggyFactions
   - PurePerms
+  - RankUp
   - RedSkyBlock
   - SeeDevice

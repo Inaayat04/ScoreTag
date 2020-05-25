@@ -10,6 +10,7 @@ use Inaayat\ScoreTag\tag\ExternalPluginTag;
 use Inaayat\ScoreTag\tag\Tag;
 use Inaayat\ScoreTag\tag\TagFactory;
 use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
 abstract class PluginTagGroup extends TagGroup {
@@ -49,7 +50,7 @@ abstract class PluginTagGroup extends TagGroup {
 	 * @return bool
 	 */
 	public function check(): bool {
-		return $this->getExternalPlugin() instanceof Plugin;
+		return $this->getExternalPlugin() instanceof PluginBase;
 	}
 
 	/**
