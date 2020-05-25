@@ -1,23 +1,25 @@
 # ScoreTag
 
 * Shows a Tag below player nametag.
-* [![](https://poggit.pmmp.io/shield.state/ScoreTag)](https://poggit.pmmp.io/p/ScoreTag)
 
-# How to Install?
+
+Download from Poggit: (https://poggit.pmmp.io/p/ScoreTag)
+
+## How to Install?
 
 * Download the plugin from Poggit (Linked above)
 * Install the plugin in your server's 'plugins' folder.
 * Restart your server.
 * Enjoy!
 
-# Supported Tags:
+## Supported Tags:
 
-## Formatting
+### Formatting
 
 * {line} - Creates another line.
 * & - This character can be used to replace the color format character (§)
 
-##Default
+### Default
 
 * {name} - The player's in-game name.
 * {tps} - The server's current TPS.
@@ -34,39 +36,39 @@
 * {hp} - The player's current health.
 * {max_hp} - The player's maximum health.
 
-## CombatLogger
+### CombatLogger
 
 * {timer} - The player's current timer on the plugin ('', if the player doesn't have one)
 
-## EconomyAPI
+### EconomyAPI
 
 * {money} - Show's the player's money.
 
-## FactionsPro
+### FactionsPro
 
 * {faction} - The name of the player's current faction ('None', if not in one)
 * {fpower} - The faction's current power level ('', if not in one)
 
-## PiggyFactions
+### PiggyFactions
 
 * {faction_name} - The name of the player's current faction ('None', if not in one).
 * {faction_power} - The faction's current power level ('', if not in one).
 * {faction_rank} - The player's rank in PiggyFactions. ('', if none).
 
-## PurePerms
+### PurePerms
 
 * {rank} - The player's rank.
 * {prefix} - The player's prefix.
 * {suffix} - The player's suffix.
 
-## RedSkyblock
+### RedSkyblock
 
 * {island_name} - The name of the player's island. ('', if the player doesn't have an island)
 * {island_rank} - The player's rank.
 * {island_value} - The value of the player's island. ('', if the player doesn't have an island)
 
 
-## SeeDevice (Palente)
+### SeeDevice (Palente)
 
 * {device} - The player's current device.
 * {os} - The player's current OS.
