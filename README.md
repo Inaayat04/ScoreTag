@@ -5,69 +5,71 @@
 
 # How to Install?
 
-* Put the plugin to you're /plugins folder.
-* Restart you're server.
-* and done Enjoy.
+* Download the plugin from Poggit (Linked above)
+* Install the plugin in your server's 'plugins' folder.
+* Restart your server.
+* Enjoy!
 
-# ScoreTag List:
+# Supported Tags:
 
-#{name} - show player name.
+## Formatting
 
-#{tps} - show server TickPerSecond.
+* {line} - Creates another line.
+* & - This character can be used to replace the color format character (§)
 
-#{online} - shows the count of how much player is online.
+##Default
 
-#{max_online} - get server max online.
+* {name} - The player's in-game name.
+* {tps} - The server's current TPS.
+* {online} - The player count for the server.
+* {max} - The maximum amount of players that the server can hold.
+* {x}/{y}/{z} - The player's coordinates.
+* {level} - The player's current level. 
+* {itemId} - The ID of the item in the player's hand
+* {itemDamage} - The damage of the item in the player's hand.
+* {itemName} - The name of the item in the player's hand.
+* {usage} - The server's tick usage.
+* {ping} - The player's current ping.
+* {cps} - The player's current CPS.
+* {hp} - The player's current health.
+* {max_hp} - The player's maximum health.
 
-#{x}/{y}/{z} - get player position position xyz.
+## CombatLogger
 
-#{level} - shows world name.
+* {timer} - The player's current timer on the plugin ('', if the player doesn't have one)
 
-#{id}:{ids} - Shows what item ID holding.
+## EconomyAPI
 
-#{item} - shows the player holding item name.
+* {money} - Show's the player's money.
 
-#{usage} - Shows the server TickUsage.
+## FactionsPro
 
-#{ping} - shows the player ping.
+* {faction} - The name of the player's current faction ('None', if not in one)
+* {fpower} - The faction's current power level ('', if not in one)
 
-#{cps} - shows the player CPS.
+## PiggyFactions
 
-#{money} - shows the player Money. (must have Economyapi plugin)
+* {faction_name} - The name of the player's current faction ('None', if not in one).
+* {faction_power} - The faction's current power level ('', if not in one).
+* {faction_rank} - The player's rank in PiggyFactions. ('', if none).
 
-#{hp} - shows the player health.
+## PurePerms
 
-#{max_hp} - shows the player max health.
+* {rank} - The player's rank.
+* {prefix} - The player's prefix.
+* {suffix} - The player's suffix.
 
-#{line} - go to another line.
+## RedSkyblock
 
-#{rank} - shows player rank. (must have PurePerms plugin)
+* {island_name} - The name of the player's island. ('', if the player doesn't have an island)
+* {island_rank} - The player's rank.
+* {island_value} - The value of the player's island. ('', if the player doesn't have an island)
 
-#{prefix} - shows player prefix. (must have PurePerms plugin)
 
-#{suffix} - shows player suffix. (must have PurePerms plugin)
+## SeeDevice (Palente)
 
-#{faction} - shows player faction.  (must have FactionPro plugin)
-
-#{fpower} - shows player faction player. (must have FactionPro plugin)
-
-#{combatlogger} - shows player combat log. (must have CombatLogger plugin)
-
-#{island_name} - shows player island name. (must have RedSkyblock plugin)
-
-#{island_rank} - shows player island rank. (must have RedSkyblock plugin)
-
-#{island_value} - shows rank island value. (must have RedSkyblock plugin)
-
-#{faction_name} - shows player faction name. (must have PiggyFactions plugin)
-
-#{faction_power} - shows player faction power. (must have PiggyFactions plugin)
-
-#{faction_rank} - shows the player faction rank. (must have PiggyFactions plugin)
-
-#{device} - shows the player device. (Must have SeeDevice plugin by Palente)
-
-#{os} - shows the player OS. (must have SeeDevice plugin by Palante)
+* {device} - The player's current device.
+* {os} - The player's current OS.
 
 # Image:
 

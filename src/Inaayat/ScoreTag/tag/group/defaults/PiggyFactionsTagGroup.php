@@ -31,13 +31,14 @@ class PiggyFactionsTagGroup extends PluginTagGroup {
 	public function register(TagFactory $factory): array {
 		return [
 			new ExternalPluginTag("faction_name", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return ($plugin->getPlayerManager()->getPlayer($player->getUniqueId())->getFaction())->getName() ?? "";
+				return ($plugin->getPlayerManager()->getPlayer($player->getUniqueId())->getFaction())->getName() ?? "None";
 			}),
 			new ExternalPluginTag("faction_power", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return (string) round(($plugin->getPlayerManager()->getPlayer($player->getUniqueId())->getFaction())->getPower() ?? -1, 2, PHP_ROUND_HALF_DOWN);
+				$faction = $plugin->getPlayerManager()->getPlayer($player->getUniqueId())->getFaction();
+				return $faction !== null ? (string) round($faction->getPower() ?? -1, 2, PHP_ROUND_HALF_DOWN) : "";
 			}),
 			new ExternalPluginTag("faction_rank", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getPlayerManager()->getPlayer($player->getUniqueId())->getRole();
+				return $plugin->getPlayerManager()->getPlayer($player->getUniqueId())->getRole() ?? "";
 			})
 		];
 	}

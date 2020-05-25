@@ -33,10 +33,10 @@ class PurePermsTagGroup extends PluginTagGroup {
 				return $plugin->getUserDataMgr()->getGroup($player)->getName();
 			}),
 			new ExternalPluginTag("prefix", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getUserDataMgr()->getNode($player, "prefix");
+				return $plugin->getUserDataMgr()->getNode($player, "prefix") ?? "";
 			}),
 			new ExternalPluginTag("suffix", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getUserDataMgr()->getNode($player, "suffix");
+				return $plugin->getUserDataMgr()->getNode($player, "suffix") ?? "";
 			})
 		];
 	}

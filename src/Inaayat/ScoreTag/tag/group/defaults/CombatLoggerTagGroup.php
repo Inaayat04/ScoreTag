@@ -28,8 +28,8 @@ class CombatLoggerTagGroup extends PluginTagGroup {
 	 */
 	public function register(TagFactory $factory): array {
 		return [
-			new ExternalPluginTag("combatlogger", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return (string) $plugin->getTagDuration($player);
+			new ExternalPluginTag("timer", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
+				return (string) $plugin->getTagDuration($player) ?? "";
 			})
 		];
 	}

@@ -29,13 +29,13 @@ class RedSkyBlockTagGroup extends PluginTagGroup {
 	public function register(TagFactory $factory): array {
 		return [
 			new ExternalPluginTag("island_name", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getIslandName($player);
+				return $plugin->getIslandName($player) ?? "";
 			}),
 			new ExternalPluginTag("island_rank", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->calcRank($player->getLowerCaseName());
+				return $plugin->calcRank($player->getLowerCaseName()) ?? "";
 			}),
 			new ExternalPluginTag("island_value", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return (string) $plugin->getValue($player);
+				return (string) $plugin->getValue($player) ?? "";
 			})
 		];
 	}

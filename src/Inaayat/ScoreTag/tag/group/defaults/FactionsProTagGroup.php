@@ -29,10 +29,10 @@ class FactionsProTagGroup extends PluginTagGroup {
 	public function register(TagFactory $factory): array {
 		return [
 			new ExternalPluginTag("faction", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return $plugin->getPlayerFaction($player);
+				return $plugin->getPlayerFaction($player) ?? "None";
 			}),
 			new ExternalPluginTag("fpower", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
-				return (string) $plugin->getFactionPower($plugin->getPlayerFaction($player));
+				return (string) $plugin->getFactionPower($plugin->getPlayerFaction($player)) ?? "";
 			})
 		];
 	}

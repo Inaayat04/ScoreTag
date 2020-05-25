@@ -1,5 +1,5 @@
 ---
-
+##
 #   _____                 _______          
 #  / ____|               |__   __|         
 # | (___   ___ ___  _ __ ___| | __ _  __ _ 
@@ -7,46 +7,13 @@
 #  ____) | (_| (_) | | |  __/ | (_| | (_| |
 # |_____/ \___\___/|_|  \___|_|\__,_|\__, |
 #                                     __/ |
-#                                    |___/ 
-
-
-# ScoreTag Configuation:
-# use § or & for color:
+#                                    |___/
+#
+# For a list of supported score tags, visit https://github.com/Inaayat04/ScoreTag
+##
 
 # The tag displayed below the player's name tag
 tag: "§a§lHealth: {line} &d{hp}/{max_hp}"
 # How often to update the score tags (in ticks)
 update-period: 10
-
-#ScoreTag List:
-#{name} - show player name.
-#{tps} - show server TickPerSecond.
-#{online} - shows the count of how much player is online.
-#{max_online} - get server max online.
-#{x}/{y}/{z} - get player position position xyz.
-#{level} - shows world name.
-#{itemId} - Shows what item ID holding.
-#{itemDamage} - Shows the damage of the item the player is holding
-#{itemName} - shows the player holding item name.
-#{usage} - Shows the server TickUsage.
-#{ping} - shows the player ping.
-#{cps} - shows the player CPS.
-#{money} - shows the player Money. (must have EconomyAPI plugin)
-#{hp} - shows the player health.
-#{max_hp} - shows the player max health.
-#{line} - go to another line.
-#{rank} - shows player rank. (must have PurePerms plugin)
-#{prefix} - shows player prefix. (must have PurePerms plugin)
-#{suffix} - shows player suffix. (must have PurePerms plugin)
-#{faction} - shows player faction.  (must have FactionPro plugin)
-#{fpower} - shows player faction player. (must have FactionPro plugin)
-#{combatlogger} - shows player combat log. (must have CombatLogger plugin)
-#{island_name} - shows player island name. (must have RedSkyblock plugin)
-#{island_rank} - shows player island rank. (must have RedSkyblock plugin)
-#{island_value} - shows rank island value. (must have RedSkyblock plugin)
-#{faction_name} - shows player faction name. (must have PiggyFactions plugin)
-#{faction_power} - shows player faction power. (must have PiggyFactions plugin)
-#{faction_rank} - shows the player faction rank. (must have PiggyFactions plugin)
-#{device} - shows the player device. (Must have SeeDevice plugin by Palente)
-#{os} - shows the player OS. (must have SeeDevice plugin by Palente)
 ...
