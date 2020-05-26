@@ -28,6 +28,9 @@ class EconomyAPITagGroup extends PluginTagGroup {
 	 */
 	public function register(TagFactory $factory): array {
 		return [
+			new ExternalPluginTag("money_prefix", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
+				return $plugin->getMonetaryUnit();
+			}),
 			new ExternalPluginTag("money", $this->getExternalPlugin(), function (Player $player, Plugin $plugin): string {
 				return (string) $plugin->myMoney($player);
 			})

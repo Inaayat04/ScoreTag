@@ -42,6 +42,7 @@ Download from Poggit: [![](https://poggit.pmmp.io/shield.state/ScoreTag)](https:
 ### EconomyAPI
 
 * {money} - Show's the player's money.
+* {money_prefix} - Retrieves the monetary unit for EconomyAPI.
 
 ### FactionsPro
 

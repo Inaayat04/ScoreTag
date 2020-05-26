@@ -1,5 +1,5 @@
 name: ScoreTag
-version: 1.0.7
+version: 1.0.8
 main: Inaayat\ScoreTag\Main
 api:
   - 3.0.0
