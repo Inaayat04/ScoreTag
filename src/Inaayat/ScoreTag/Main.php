@@ -19,8 +19,8 @@ class Main extends PluginBase implements Listener {
 	
 	public function onEnable(){
 		@mkdir($this->getDataFolder());
-		$this->saveResources("config.yml");
-		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+		$this->saveDefaultConfig();
+		$this->config = $this->getConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this ,$this);
 		$this->getScheduler()->scheduleRepeatingTask(new ScoreTagTask($this), 10);
 	}
