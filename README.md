@@ -9,6 +9,11 @@
 * Restart you're server.
 * and done Enjoy.
 
+### Warning:
+
+* This plugin is beta.
+* Report errors in issue.
+
 # ScoreTag List:
 
 #{name} - show player name.
