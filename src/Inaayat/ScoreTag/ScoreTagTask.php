@@ -66,7 +66,7 @@ class ScoreTagTask extends Task {
                 $tag = str_replace('{suffix}', $PurePerms->getUserDataMgr()->getNode($players, "suffix"), $tag);
             }
 
-            $FactionsPro = $this->getServer()->getPluginManager()->getPlugin("FactionsPro");
+            $FactionsPro = $this->plugin->getServer()->getPluginManager()->getPlugin("FactionsPro");
             $factionName = $FactionsPro->getPlayerFaction($player->getName());
 		if(!is_null($FactionsPro)){
                   $tag = str_replace('{faction}', $FactionsPro->getPlayerFaction($players->getName()), $tag);
