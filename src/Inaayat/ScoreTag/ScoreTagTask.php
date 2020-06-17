@@ -67,10 +67,9 @@ class ScoreTagTask extends Task {
             }
 
             $FactionsPro = $this->plugin->getServer()->getPluginManager()->getPlugin("FactionsPro");
-            $factionName = $FactionsPro->getPlayerFaction($player->getName());
 		if(!is_null($FactionsPro)){
-                  $tag = str_replace('{faction}', $FactionsPro->getPlayerFaction($players->getName()), $tag);
-                  $tag = str_replace('{fpower}', $FactionsPro->getFactionPower($factionName), $tag);
+                  $tag = str_replace('{faction}', $this->getPlayerFaction($players), $tag);
+                  $tag = str_replace('{fpower}', $this->getFactionPower($players), $tag);
 		}
 
             $Logger = $this->plugin->getServer()->getPluginManager()->getPlugin("CombatLogger");
@@ -105,4 +104,22 @@ class ScoreTagTask extends Task {
 		    $players->setScoreTag($tag);
 		}
 	}
-}
+	
+	public function getPlayerFaction(Player $player): string{
+			$factionsPro = $this->factionsPro;
+			$factionName = $factionsPro->getPlayerFaction($player->getName());
+			if($factionName === null){
+				return "No Faction";
+			}
+			return $factionName;
+                  }
+
+		public function getFactionPower(Player $player){
+			$factionsPro = $this->plugin->getServer()->getPluginManager()->getPlugin("FactionsPro");
+			$factionName = $factionsPro->getPlayerFaction($player->getName());
+			if($factionName === null){
+				return "No Faction";
+			}
+			return $factionsPro->getFactionPower($factionName);
+		}
+	}
