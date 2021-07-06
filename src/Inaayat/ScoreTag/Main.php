@@ -56,7 +56,7 @@ class Main extends PluginBase implements Listener {
 		$player = $event->getPlayer();
 		$packet = $event->getPacket();
 		if($packet instanceof InventoryTransactionPacket){
-			$transactionType = $packet->transactionType;
+			$transactionType = $packet->trData->getTypeId();
 			if($transactionType === InventoryTransactionPacket::TYPE_USE_ITEM || $transactionType === InventoryTransactionPacket::TYPE_USE_ITEM_ON_ENTITY){
 				$this->addCPS($player);
 			}
